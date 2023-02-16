@@ -15,6 +15,36 @@
 
    }
 
+   .colvideo{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+   }
+    
+   .forward{
+    animation-name: forward_animation;
+    animation-duration: 700ms;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    
+   }
+
+   @keyframes forward_animation
+   {
+      from{
+        transform: translateX(0%);
+      }
+
+      to{
+        transform: translateX(200px)
+      }
+   }
+   .gridshop{
+    display: grid;
+    grid-template-columns: repeat(8,165px) ;
+    gap: 10px;
+   }
    .golu{
     display: flex;
     flex-direction: row;
@@ -40,7 +70,7 @@
 }
 
 .swinghead .swing{
-    
+        
         animation-name: swipereverse;
         animation-duration: 300ms;
         animation-iteration-count: 1;
@@ -66,60 +96,68 @@
 
   }
 }
+.stickytag{
+    
+    position: sticky;
+  top: 0;
+}
     </style>
 </head>
 <body>
-    <div class="overflow-x-hidden relative">
-     
-        <!-- topmost -->
-        <div class="bg-black text-white text-sm py-2">
-            <p class="text-center ">Win every game without hassle with Airdopes 192 & its low latency @₹1299.Shop Now!</p>
+    <!-- topmost -->
+    <div class="bg-black text-white text-sm py-2">
+        <p class="text-center ">Win every game without hassle with Airdopes 192 & its low latency @₹1299.Shop Now!</p>
+    </div>
+    <!-- Nav bar -->
+    <nav class="stickytag py-5 bg-white shadow-[0px_1px_10px_0px_rgba(0,0,0,0.2)] z-10">
+        <div class="  max-w-[1450px] mx-auto flex justify-between ">
+           <img src="./images_all/boat_logo_small_header.png" alt="" loading="lazy">
+
+           <ul class="flex gap-11 font-bold opacity-90 items-center mr-[100px]">
+            <li class="group relative swinghead ">
+               <p>CATEGORIES</p>
+            <div class="w-full h-[1px] bg-black 
+             absolute bottom-0 
+            swing
+             "></div> </li>
+             <li class="group relative swinghead ">
+                <p>LOVE OUT LOUD</p>
+             <div class="w-full h-[1px] bg-black 
+              absolute bottom-0 
+             swing
+
+              
+              "></div> </li>
+              <li class="group relative swinghead ">
+                <p>GIFT WITH BOAT</p>
+             <div class="w-full h-[1px] bg-black 
+              absolute bottom-0 
+             swing
+
+              
+              "></div> </li>
+              <li class="group relative swinghead ">
+                <p>MORE</p>
+             <div class="w-full h-[1px] bg-black 
+              absolute bottom-0 
+             swing
+
+              
+              "></div> </li>
+           </ul>
+
+           <div class="flex gap-x-4 items-center">
+            <div class="w-[290px] h-[40px] rounded-full bg-[#EAEAEA] "></div>
+            <a href="#"><img src="./images_all/small icons/Profile-1.png" alt=""  class="w-[30px]"></a>
+            <a href="#"><img src="./images_all/small icons/cart.png" alt=""  class="w-[30px]"></a>
+           </div>
         </div>
-        <!-- Nav bar -->
-        <nav class="sticky top-0 py-5  shadow-[0px_1px_10px_0px_rgba(0,0,0,0.2)]">
-            <div class="  max-w-[1450px] mx-auto flex justify-between ">
-               <img src="./images_all/boat_logo_small_header.png" alt="" loading="lazy">
+    </nav>
 
-               <ul class="flex gap-11 font-bold opacity-90 items-center mr-[100px]">
-                <li class="group relative swinghead ">
-                   <p>CATEGORIES</p>
-                <div class="w-full h-[1px] bg-black 
-                 absolute bottom-0 
-                swing
-                 "></div> </li>
-                 <li class="group relative swinghead ">
-                    <p>LOVE OUT LOUD</p>
-                 <div class="w-full h-[1px] bg-black 
-                  absolute bottom-0 
-                 swing
- 
-                  
-                  "></div> </li>
-                  <li class="group relative swinghead ">
-                    <p>GIFT WITH BOAT</p>
-                 <div class="w-full h-[1px] bg-black 
-                  absolute bottom-0 
-                 swing
- 
-                  
-                  "></div> </li>
-                  <li class="group relative swinghead ">
-                    <p>MORE</p>
-                 <div class="w-full h-[1px] bg-black 
-                  absolute bottom-0 
-                 swing
- 
-                  
-                  "></div> </li>
-               </ul>
 
-               <div class="flex gap-x-4 items-center">
-                <div class="w-[290px] h-[40px] rounded-full bg-[#EAEAEA] "></div>
-                <a href="#"><img src="./images_all/small icons/Profile-1.png" alt=""  class="w-[30px]"></a>
-                <a href="#"><img src="./images_all/small icons/cart.png" alt=""  class="w-[30px]"></a>
-               </div>
-            </div>
-        </nav>
+
+    <div class=" relative overflow-x-hidden">
+     
        
         <!-- Hero section -->
         <div class="relative max-w-[1450px] mt-2 mb-[100px] mx-auto">
@@ -192,7 +230,7 @@
         
         <!-- Best of boat -->
 
-        <div class="relative max-w-[1450px] mt-2 mb-[100px] mx-auto">
+        <div class="relative max-w-[1450px] mt-2 mb-[40px] mx-auto">
             <div class="font-bold mb-10 text-xl">
                 Best of boAt
             </div>
@@ -405,11 +443,700 @@
             
 
            
+        </div>
+
+         <!-- shop by category -->
+         <div class="relative max-w-[1450px] mt-2 mx-auto mb-[40px]"> 
+            <div class="font-bold text-lg mb-5"> Shop by Category</div>
+
+            
+            <div class="w-[100px]"></div>
+            <!-- card sections -->
+            <div class="gridshop ">
+                <!-- card 1 -->
+                <div class=" flex bg-[#E3E3E3] px-3  cursor-pointer justify-start pt-3  pb-[2px] rounded-md">
+                    <p class="text-xs max-w-[100px] leading-[12px] font-bold ">Airdopes True  Wireless Earphones
+                    </p>
+                    <img src="./images_all/selectcategory/img1.png" class="w-[62px] h-[70px]" alt="">
+                </div>
+                <!-- card 2 -->
+                <div class=" flex bg-[#E3E3E3]  px-3  cursor-pointer justify-start pt-3  pb-[2px] rounded-md">
+                    <p class="text-xs max-w-[80px] leading-[12px] font-bold ">Rockerz Neckbands
+                    </p>
+                    <img src="./images_all/selectcategory/img2.png" class="w-[70px] h-[70px]" alt="">
+                </div>
+
+                <!-- card3 -->
+                <div class=" flex bg-[#E3E3E3]  px-3 cursor-pointer justify-start pt-3  pb-[2px] rounded-md">
+                    <p class="text-xs max-w-[80px] leading-[12px] font-bold ">Smart Watches
+                    </p>
+                    <img src="./images_all/selectcategory/img3.png" class="w-[70px] h-[70px]" alt="">
+                </div>
+
+                <!-- card4 -->
+                <div class=" flex bg-[#E3E3E3]  px-3 cursor-pointer justify-start pt-3 pb-[2px] rounded-md">
+                    <p class="text-xs max-w-[80px] leading-[12px] font-bold ">Rockerz Headphones
+                    </p>
+                    <img src="./images_all/selectcategory/img4.png" class="w-[70px] h-[70px]" alt="">
+                </div>
+
+                <!-- Card5 -->
+                <div class=" flex bg-[#E3E3E3] px-3 cursor-pointer justify-start pt-3 pb-[2px] rounded-md">
+                    <p class="text-xs max-w-[80px] leading-[12px] font-bold ">Stone Speaker
+                    </p>
+                    <img src="./images_all/selectcategory/img5.png" class="w-[70px] h-[70px]" alt="">
+                </div>
+                <!-- card6 -->
+                <div class=" flex bg-[#E3E3E3]  px-3  cursor-pointer justify-start pt-3 pb-[2px] rounded-md">
+                    <p class="text-xs max-w-[80px] leading-[12px] font-bold ">Bassheads Wired Headphones
+                    </p>
+                    <img src="./images_all/selectcategory/img6.png" class="w-[70px] h-[70px]" alt="">
+
+                </div>
+
+                <!-- card7 -->
+                <div class=" flex bg-[#E3E3E3]  px-3  cursor-pointer justify-start pt-3 pb-[2px] rounded-md">
+                    <p class="text-xs max-w-[80px] leading-[12px] font-bold ">Bassheads Wired Earphones
+                    </p>
+                    <img src="./images_all/selectcategory/img7.png" class="w-[70px] h-[70px]" alt="">
+                </div>
+
+                <!-- card8 -->
+                <div class=" flex bg-[#E3E3E3] px-3 cursor-pointer justify-start pt-3 pb-[2px] rounded-md">
+                    <p class="text-xs max-w-[80px] leading-[12px] font-bold ">Aavante  Home Audio
+                    </p>
+                    <img src="./images_all/selectcategory/img8.png" class="w-[70px] h-[70px]" alt="">
+                </div>
+
+                <!-- card9 -->
+                <div class=" flex bg-[#E3E3E3]  px-3 cursor-pointer justify-start pt-3 pb-[2px] rounded-md">
+                    <p class="text-xs max-w-[80px] leading-[12px] font-bold ">Immortal Gaming Headphones
+                    </p>
+                    <img src="./images_all/selectcategory/img9.png" class="w-[70px] h-[70px]" alt="">
+                </div>
+
+                <!-- card10 -->
+                <div class=" flex bg-[#E3E3E3] px-3  cursor-pointer justify-start pt-3 pb-[2px] rounded-md">
+                    <p class="text-xs max-w-[80px] leading-[12px] font-bold ">Party Speakers
+                    </p>
+                    <img src="./images_all/selectcategory/img10.png" class="w-[70px] h-[70px]" alt="">
+                </div>
+
+                <!-- card11 -->
+                <div class=" flex bg-[#E3E3E3] px-3 cursor-pointer justify-start pt-3 pb-[2px] rounded-md">
+                    <p class="text-xs max-w-[80px] leading-[12px] font-bold ">Misfit Trimmers
+                    </p>
+                    <img src="./images_all/selectcategory/img11.png" class="w-[70px] h-[70px]" alt="">
+                </div>
+
+                <!-- card12 -->
+                <!-- width in place of max width -->
+                <div class=" flex bg-[#E3E3E3]  px-3  cursor-pointer justify-start pt-3 pb-[2px] rounded-md">
+                    <p class="text-xs w-[80px] leading-[12px] font-bold text-left ">Chargers
+                    </p>
+                    <img src="./images_all/selectcategory/img12.png" class="w-[70px] h-[70px]" alt="">
+                </div>
+
+                <!-- card13 -->
+                <div class=" flex bg-[#E3E3E3]  px-3  cursor-pointer justify-start pt-3 pb-[2px] rounded-md">
+                    <p class="text-xs max-w-[80px] leading-[12px] font-bold "> Power Banks
+                    </p>
+                    <img src="./images_all/selectcategory/img13.png" class="w-[70px] h-[70px]" alt="">
+                </div>
+
+                <!-- card14 -->
+                <div class=" flex bg-[#E3E3E3] px-3  cursor-pointer justify-start pt-3 pb-[2px] rounded-md">
+                    <p class="text-xs max-w-[80px] leading-[12px] font-bold ">Mobile Accessories
+                    </p>
+                    <img src="./images_all/selectcategory/img14.png" class="w-[70px] h-[70px]" alt="">
+                </div>
+                
+                <!-- card15 -->
+                <div class=" flex bg-[#E3E3E3]  px-3  cursor-pointer justify-start pt-3 pb-[2px] rounded-md">
+                    <p class="text-xs max-w-[80px] leading-[12px] font-bold ">Car Accessories
+                    </p>
+                    <img src="./images_all/selectcategory/img15.png" class="w-[70px] h-[70px]" alt="">
+                </div>
+
+                <!-- card16 -->
+                <div class=" flex bg-[#E3E3E3] px-3  cursor-pointer justify-start pt-3 pb-[2px] rounded-md">
+                    <p class="text-xs max-w-[80px] leading-[12px] font-bold ">TRebel Range
+                    </p>
+                    <img src="./images_all/selectcategory/img16.png" class="w-[70px] h-[70px]" alt="">
+                </div>
+
+                <!-- card17 -->
+                <div class=" flex bg-[#E3E3E3]  px-3  cursor-pointer justify-start pt-3 pb-[2px] rounded-md">
+                    <p class="text-xs max-w-[80px] leading-[12px] font-bold ">Limited Edition
+                    </p>
+                    <img src="./images_all/selectcategory/img17.png" class="w-[70px] h-[70px]" alt="">
+                </div>
+
+                <!-- card18 -->
+                <div class=" flex bg-[#E3E3E3]  px-3  cursor-pointer justify-start pt-3  pb-[2px] rounded-md">
+                    <p class="text-xs w-[80px] leading-[12px] font-bold ">View All
+                    </p>
+                    <img src="./images_all/selectcategory/img18.png" class="w-[70px] h-[70px]" alt="">
+                </div>
+            </div>
          </div>
-        
+
+         <!-- Daily Deals -->
+         <div class="relative max-w-[1450px] mt-2 mx-auto mb-[100px]">
+           <div class="font-bold text-xl mb-3">Daily Deals</div>
+           <div class="bg-[#f7c20a] px-3 py-[6px] flex gap-x-1 w-fit justify-center relative items-center rounded-md overflow-x-hidden mb-10" >
+             <img src="./images_all/small icons/bijli.png" class="w-4 h-4" alt="">
+             <p class="font-semibold"> Ending In: 0h 19m 13s </p>
+             <div class="bg-white px-2 h-4 flex items-center font-bold text-[14px]">2</div>
+             <div class="w-11 blur-md h-full absolute  left-0 forward bg-black opacity-25"></div>
+           </div>
+
+           <div class=" w-full relative flex gap-x-4">
+
+            <!-- card1 -->
+            <div class="bg-[#E3E3E3] min-h-[50vh] min-w-[280px] rounded-lg relative  hemlo p-2 ">
+                <div class=" bg-[#f7c20a] text-xs font-bold py-1 px-[5px] absolute left-0 rounded-r-lg flex gap-x-1 ">
+                    <img src="./images_all/small icons/bijli.png" class="w-3" alt="">
+                    <div>SUPER SAVER</div> </div>
+                <div class="flex  w-fit items-center justify-center absolute top-[45%] right-3">
+                    <div class="h-10 w-[20px] bg-[#f7c20a] rounded-bl-full rounded-tl-full"></div>
+                    <div class="h-10 w-[20px] bg-[#B1B1B1] rounded-br-full rounded-tr-full "></div>
+                    <div class="h-8 w-8 rounded-full bg-white absolute font-bold self-center text-[10px] leading-[10px] flex justify-center items-center  "> 96% <br> sold</div>
+    
+                </div>
+                <div class="group relative">
+                    <img src="./images_all/dailydeals/Img_1.png" class="w-[220px] pt-8  px-4 opacity-100 group-hover:opacity-0 relative transition-all duration-500 group " alt="">
+                    <img src="./images_all/dailydeals/Img_1_hover.png" class="w-[220px] pt-8  px-4  opacity-0 absolute group-hover:opacity-100 transition-all duration-500 top-0" alt="">
+
+                </div>
+               
+
+                <div class="bg-white rounded-md p-2 px-3 flex-col w-full ">
+                    <h3 class="font-bold">Airdopes 131 DC Edition</h3>
+                    <div class="flex gap-x-2 items-center border-b-2 border-gray-200 py-1">
+                        <p class="font-bold">₹999 </p> 
+                        <p class="text-[#28a745] ">67% off</p>
+                        <del class="text-xs">₹2,990</del>
+                    </div>
+                    <div class="flex items-center gap-x-1 my-1">
+                        <img src="./images_all/small icons/WhatsApp-Image-2023-02-16-at-1.30.01-AM.png" class="w-2 h-2" alt="">
+                        <p class="text-[12px]">5.0</p>
+                        <div class="h-3 w-[2px] bg-black opacity-40"></div>
+                        <p class="text-[12px]">10 reviews</p>
+                    </div>
+                    <div class="mb-2 text-xs font-semibold">
+                        ₹15 Extra Discount on UPI
+                    </div>
+                     <button class="bg-[#f7c20a] w-full  rounded-md py-1  font-bold ">ADD TO CART</button>
+                </div>
+
+            </div>
+
+            <!-- card2 -->
+
+            <div class="bg-[#E3E3E3] min-h-[50vh] min-w-[280px] rounded-lg  hemlo p-2 relative ">
+                <div class=" bg-[#f7c20a] text-xs font-bold py-1 px-[5px] absolute left-0 rounded-r-lg flex gap-x-1 ">
+                    <img src="./images_all/small icons/bijli.png" class="w-3" alt="">
+                    <div>SUPER SAVER</div> </div>
+                <div class="flex  w-fit items-center justify-center absolute top-[45%] right-3">
+                    <div class="h-10 w-[20px] bg-[#f7c20a] rounded-bl-full rounded-tl-full"></div>
+                    <div class="h-10 w-[20px] bg-[#B1B1B1] rounded-br-full rounded-tr-full "></div>
+                    <div class="h-8 w-8 rounded-full bg-white absolute font-bold self-center text-[10px] leading-[10px] flex justify-center items-center  "> 94% <br> sold</div>
+    
+                </div>
+                <div class="group relative">
+                    <img src="./images_all/dailydeals/img_2.png" class="w-[220px] pt-8  px-4 opacity-100 group-hover:opacity-0 relative transition-all duration-500 group " alt="">
+                    <img src="./images_all/dailydeals/img2_hover.png" class="w-[220px] pt-8  px-4  opacity-0 absolute group-hover:opacity-100 transition-all duration-500 top-0" alt="">
+
+                </div>
+               
+
+                <div class="bg-white rounded-md p-2 px-3 flex-col w-full ">
+                    <h3 class="font-bold">Airdopes 131</h3>
+                    <div class="flex gap-x-2 items-center border-b-2 border-gray-200 py-1">
+                        <p class="font-bold">₹1,099 </p> 
+                        <p class="text-[#28a745] ">63% off</p>
+                        <del class="text-xs">₹2,990</del>
+                    </div>
+                    <div class="flex items-center gap-x-1 my-1">
+                        <img src="./images_all/small icons/WhatsApp-Image-2023-02-16-at-1.30.01-AM.png" class="w-2 h-2" alt="">
+                        <p class="text-[12px]">4.8</p>
+                        <div class="h-3 w-[2px] bg-black opacity-40"></div>
+                        <p class="text-[12px]">1298 reviews</p>
+                    </div>
+                    <div class="mb-2 text-xs font-semibold">
+                        ₹15 Extra Discount on UPI
+                    </div>
+                     <button class="bg-[#f7c20a] w-full  rounded-md py-1  font-bold ">ADD TO CART</button>
+                </div>
+
+            </div>
+
+            <!-- card3 -->
+            <div class="bg-[#E3E3E3] min-h-[50vh] min-w-[280px] rounded-lg  hemlo p-2 relative">
+                <div class=" bg-[#f7c20a] text-xs font-bold py-1 px-[5px] absolute left-0 rounded-r-lg flex gap-x-1 ">
+                    <img src="./images_all/small icons/bijli.png" class="w-3" alt="">
+                    <div>SUPER SAVER</div> </div>
+                <div class="flex  w-fit items-center justify-center absolute top-[45%] right-3">
+                    <div class="h-10 w-[20px] bg-[#f7c20a] rounded-bl-full rounded-tl-full"></div>
+                    <div class="h-10 w-[20px] bg-[#B1B1B1] rounded-br-full rounded-tr-full "></div>
+                    <div class="h-8 w-8 rounded-full bg-white absolute font-bold self-center text-[10px] leading-[10px] flex justify-center items-center  "> 96% <br> sold</div>
+    
+                </div>
+                <div class="group relative">
+                    <img src="./images_all/dailydeals/img_3.png" class="w-[220px] pt-8  px-4 opacity-100 group-hover:opacity-0 relative transition-all duration-500 group " alt="">
+                    <img src="./images_all/dailydeals/img_3_hover.png" class="w-[220px] pt-8  px-4  opacity-0 absolute group-hover:opacity-100 transition-all duration-500 top-0" alt="">
+
+                </div>
+               
+
+                <div class="bg-white rounded-md p-2 px-3 flex-col w-full ">
+                    <h3 class="font-bold">Storm Call</h3>
+                    <div class="flex gap-x-2 items-center border-b-2 border-gray-200 py-1">
+                        <p class="font-bold">₹1,799 </p> 
+                        <p class="text-[#28a745] ">77% off</p>
+                        <del class="text-xs">₹7,990</del>
+                    </div>
+                    <div class="flex items-center gap-x-1 my-1">
+                        <img src="./images_all/small icons/WhatsApp-Image-2023-02-16-at-1.30.01-AM.png" class="w-2 h-2" alt="">
+                        <p class="text-[12px]">4.7</p>
+                        <div class="h-3 w-[2px] bg-black opacity-40"></div>
+                        <p class="text-[12px]">23 reviews</p>
+                    </div>
+                    <div class="mb-2 text-xs font-semibold">
+                        ₹15 Extra Discount on UPI
+                    </div>
+                     <button class="bg-[#f7c20a] w-full  rounded-md py-1  font-bold ">ADD TO CART</button>
+                </div>
+
+            </div>
+
+            <!-- card4 -->
+            <div class="bg-[#E3E3E3] min-h-[50vh] min-w-[280px] rounded-lg  hemlo p-2 relative">
+                <div class=" bg-[#f7c20a] text-xs font-bold py-1 px-[5px] absolute left-0 rounded-r-lg flex gap-x-1 ">
+                    <img src="./images_all/small icons/bijli.png" class="w-3" alt="">
+                    <div>SUPER SAVER</div> </div>
+                <div class="flex  w-fit items-center justify-center absolute top-[45%] right-3">
+                    <div class="h-10 w-[20px] bg-[#f7c20a] rounded-bl-full rounded-tl-full"></div>
+                    <div class="h-10 w-[20px] bg-[#B1B1B1] rounded-br-full rounded-tr-full "></div>
+                    <div class="h-8 w-8 rounded-full bg-white absolute font-bold self-center text-[10px] leading-[10px] flex justify-center items-center  "> 90% <br> sold</div>
+    
+                </div>
+                <div class="group relative">
+                    <img src="./images_all/dailydeals/img_4.png" class="w-[220px] pt-8  px-4 opacity-100 group-hover:opacity-0 relative transition-all duration-500 group " alt="">
+                    <img src="./images_all/dailydeals/img_4_hover.png" class="w-[220px] pt-8  px-4  opacity-0 absolute group-hover:opacity-100 transition-all duration-500 top-0" alt="">
+
+                </div>
+               
+
+                <div class="bg-white rounded-md p-2 px-3 flex-col w-full ">
+                    <h3 class="font-bold">Wave Lite</h3>
+                    <div class="flex gap-x-2 items-center border-b-2 border-gray-200 py-1">
+                        <p class="font-bold">₹1,499 </p> 
+                        <p class="text-[#28a745] ">79% off</p>
+                        <del class="text-xs">₹6,990</del>
+                    </div>
+                    <div class="flex items-center gap-x-1 my-1">
+                        <img src="./images_all/small icons/WhatsApp-Image-2023-02-16-at-1.30.01-AM.png" class="w-2 h-2" alt="">
+                        <p class="text-[12px]">4.9</p>
+                        <div class="h-3 w-[2px] bg-black opacity-40"></div>
+                        <p class="text-[12px]">55 reviews</p>
+                    </div>
+                    <div class="mb-2 text-xs font-semibold">
+                        ₹15 Extra Discount on UPI
+                    </div>
+                     <button class="bg-[#f7c20a] w-full  rounded-md py-1  font-bold ">ADD TO CART</button>
+                </div>
+
+            </div>
+
+            <!-- card5 -->
+            <div class="bg-[#E3E3E3] min-h-[50vh] min-w-[280px] rounded-lg  hemlo p-2 relative">
+                <div class=" bg-[#f7c20a] text-xs font-bold py-1 px-[5px] absolute left-0 rounded-r-lg flex gap-x-1 ">
+                    <img src="./images_all/small icons/bijli.png" class="w-3" alt="">
+                    <div>SUPER SAVER</div> </div>
+                <div class="flex  w-fit items-center justify-center absolute top-[45%] right-3">
+                    <div class="h-10 w-[20px] bg-[#f7c20a] rounded-bl-full rounded-tl-full"></div>
+                    <div class="h-10 w-[20px] bg-[#B1B1B1] rounded-br-full rounded-tr-full "></div>
+                    <div class="h-8 w-8 rounded-full bg-white absolute font-bold self-center text-[10px] leading-[10px] flex justify-center items-center  "> 88% <br> sold</div>
+    
+                </div>
+                <div class="group relative">
+                    <img src="./images_all/dailydeals/img_5.png" class="w-[220px] pt-8  px-4 opacity-100 group-hover:opacity-0 relative transition-all duration-500 group " alt="">
+                    <img src="./images_all/dailydeals/img_5_hover.png" class="w-[220px] pt-8  px-4  opacity-0 absolute group-hover:opacity-100 transition-all duration-500 top-0" alt="">
+
+                </div>
+               
+
+                <div class="bg-white rounded-md p-2 px-3 flex-col w-full ">
+                    <h3 class="font-bold">Wave Call</h3>
+                    <div class="flex gap-x-2 items-center border-b-2 border-gray-200 py-1 ">
+                        <p class="font-bold">₹1,699 </p> 
+                        <p class="text-[#28a745] ">79% off</p>
+                        <del class="text-xs">₹7,990</del>
+                    </div>
+                    <div class="flex items-center gap-x-1 my-1">
+                        <img src="./images_all/small icons/WhatsApp-Image-2023-02-16-at-1.30.01-AM.png" class="w-2 h-2" alt="">
+                        <p class="text-[12px]">4.9</p>
+                        <div class="h-3 w-[2px] bg-black opacity-40"></div>
+                        <p class="text-[12px]">41 reviews</p>
+                    </div>
+                    <div class="mb-2 text-xs font-semibold">
+                        ₹15 Extra Discount on UPI
+                    </div>
+                     <button class="bg-[#f7c20a] w-full  rounded-md py-1  font-bold ">ADD TO CART</button>
+                </div>
+
+            </div>
             
 
         </div>
+
+         </div>
+
+         <!-- Smart Watches -->
+         <div class="relative max-w-[1450px] mt-2 mb-[40px] mx-auto">
+            <div class="font-bold mb-10 text-xl">
+               Smartwatches
+            </div>
+            
+            <ul class="flex gap-x-14 text-lg">
+                    <li class="bg-black text-white font-bold py-1 px-5 rounded-full">BT Calling</li>
+                    <li class="bg-[#E3E3E3] py-1 px-5 rounded-full font-semibold" >Amoled</li>
+                    <li class="bg-[#E3E3E3] py-1 px-5 rounded-full font-semibold" >Fashion</li>
+                    <li class="bg-[#E3E3E3] py-1 px-5 rounded-full font-semibold" >Fitness</li>
+            </ul>
+            <a class="text-right block font-bold underline my-2">
+                View all >
+            </a>
+            <!-- product cards -->
+            <div class=" w-full relative flex gap-x-4">
+
+                <!-- card1 -->
+                <div class="bg-[#E3E3E3] min-h-[50vh] min-w-[280px] rounded-lg relative  hemlo p-2 ">
+                    <div class="text-white bg-[#8109fa] text-xs font-bold py-[3px] px-[5px] absolute left-0 top-3 rounded-r-lg "> 🎉 NEW LAUNCH</div>
+                  
+                    <div class="group relative">
+                        <img src="./images_all/best seller page/img1.png" class="w-[220px] pt-8  px-4 opacity-100 group-hover:opacity-0 relative transition-all duration-500 group " alt="">
+                        <img src="./images_all/best seller page/img1_hover.png" class="w-[220px] pt-8  px-4  opacity-0 absolute group-hover:opacity-100 transition-all duration-500 top-0" alt="">
+    
+                    </div>
+                   
+
+                    <div class="bg-white rounded-md p-2 px-3 flex-col w-full ">
+                        <h3 class="font-bold">Airdopes 141</h3>
+                        <div class="flex gap-x-2 items-center border-b-2 border-gray-200 py-1">
+                            <p class="font-bold">₹1,499 </p> 
+                            <p class="text-[#28a745] ">67% off</p>
+                            <del class="text-xs">₹4,490</del>
+                        </div>
+                        <div class="flex items-center gap-x-1 my-1">
+                            <img src="./images_all/small icons/WhatsApp-Image-2023-02-16-at-1.30.01-AM.png" class="w-2 h-2" alt="">
+                            <p class="text-[12px]">4.8</p>
+                            <div class="h-3 w-[2px] bg-black opacity-40"></div>
+                            <p class="text-[12px]">598 reviews</p>
+                        </div>
+                        <div class="mb-2 text-xs font-semibold">
+                            ₹15 Extra Discount on UPI
+                        </div>
+                         <button class="bg-[#FF0000] w-full text-white rounded-md py-1  font-bold ">ADD TO CART</button>
+                    </div>
+
+                </div>
+
+                <!-- card2 -->
+
+                <div class="bg-[#E3E3E3] min-h-[50vh] min-w-[280px] rounded-lg relative  hemlo p-2 ">
+                    <div class="text-white bg-[#8109fa] text-xs font-bold py-[3px] px-[5px] absolute left-0 top-3 rounded-r-lg "> 🎉 NEW LAUNCH</div>
+                  
+                    <div class="group relative">
+                        <img src="./images_all/best seller page/img1.png" class="w-[220px] pt-8  px-4 opacity-100 group-hover:opacity-0 relative transition-all duration-500 group " alt="">
+                        <img src="./images_all/best seller page/img1_hover.png" class="w-[220px] pt-8  px-4  opacity-0 absolute group-hover:opacity-100 transition-all duration-500 top-0" alt="">
+    
+                    </div>
+                   
+
+                    <div class="bg-white rounded-md p-2 px-3 flex-col w-full ">
+                        <h3 class="font-bold">Airdopes 141</h3>
+                        <div class="flex gap-x-2 items-center border-b-2 border-gray-200 py-1">
+                            <p class="font-bold">₹1,499 </p> 
+                            <p class="text-[#28a745] ">67% off</p>
+                            <del class="text-xs">₹4,490</del>
+                        </div>
+                        <div class="flex items-center gap-x-1 my-1">
+                            <img src="./images_all/small icons/WhatsApp-Image-2023-02-16-at-1.30.01-AM.png" class="w-2 h-2" alt="">
+                            <p class="text-[12px]">4.8</p>
+                            <div class="h-3 w-[2px] bg-black opacity-40"></div>
+                            <p class="text-[12px]">598 reviews</p>
+                        </div>
+                        <div class="mb-2 text-xs font-semibold">
+                            ₹15 Extra Discount on UPI
+                        </div>
+                         <button class="bg-[#FF0000] w-full text-white rounded-md py-1  font-bold ">ADD TO CART</button>
+                    </div>
+
+                </div>
+
+                <!-- card3 -->
+                <div class="bg-[#E3E3E3] min-h-[50vh] min-w-[280px] rounded-lg relative  hemlo p-2 ">
+                    <div class="text-white bg-black text-xs font-bold py-[3px] px-[5px] absolute left-0 top-3 rounded-r-lg "> ALEXA +BT CALLING</div>
+                  
+                    <div class="group relative">
+                        <img src="./images_all/best seller page/img1.png" class="w-[220px] pt-8  px-4 opacity-100 group-hover:opacity-0 relative transition-all duration-500 group " alt="">
+                        <img src="./images_all/best seller page/img1_hover.png" class="w-[220px] pt-8  px-4  opacity-0 absolute group-hover:opacity-100 transition-all duration-500 top-0" alt="">
+    
+                    </div>
+                   
+
+                    <div class="bg-white rounded-md p-2 px-3 flex-col w-full ">
+                        <h3 class="font-bold">Airdopes 141</h3>
+                        <div class="flex gap-x-2 items-center border-b-2 border-gray-200 py-1">
+                            <p class="font-bold">₹1,499 </p> 
+                            <p class="text-[#28a745] ">67% off</p>
+                            <del class="text-xs">₹4,490</del>
+                        </div>
+                        <div class="flex items-center gap-x-1 my-1">
+                            <img src="./images_all/small icons/WhatsApp-Image-2023-02-16-at-1.30.01-AM.png" class="w-2 h-2" alt="">
+                            <p class="text-[12px]">4.8</p>
+                            <div class="h-3 w-[2px] bg-black opacity-40"></div>
+                            <p class="text-[12px]">598 reviews</p>
+                        </div>
+                        <div class="mb-2 text-xs font-semibold">
+                            ₹15 Extra Discount on UPI
+                        </div>
+                         <button class="bg-[#FF0000] w-full text-white rounded-md py-1  font-bold ">ADD TO CART</button>
+                    </div>
+
+                </div>
+
+                <!-- card4 -->
+                <div class="bg-[#E3E3E3] min-h-[50vh] min-w-[280px] rounded-lg relative  hemlo p-2 ">
+                    <div class="text-white bg-black text-xs font-bold py-[3px] px-[5px] absolute left-0 top-3 rounded-r-lg "> BT CALLING</div>
+                  
+                    <div class="group relative">
+                        <img src="./images_all/best seller page/img1.png" class="w-[220px] pt-8  px-4 opacity-100 group-hover:opacity-0 relative transition-all duration-500 group " alt="">
+                        <img src="./images_all/best seller page/img1_hover.png" class="w-[220px] pt-8  px-4  opacity-0 absolute group-hover:opacity-100 transition-all duration-500 top-0" alt="">
+    
+                    </div>
+                   
+
+                    <div class="bg-white rounded-md p-2 px-3 flex-col w-full ">
+                        <h3 class="font-bold">Airdopes 141</h3>
+                        <div class="flex gap-x-2 items-center border-b-2 border-gray-200 py-1">
+                            <p class="font-bold">₹1,499 </p> 
+                            <p class="text-[#28a745] ">67% off</p>
+                            <del class="text-xs">₹4,490</del>
+                        </div>
+                        <div class="flex items-center gap-x-1 my-1">
+                            <img src="./images_all/small icons/WhatsApp-Image-2023-02-16-at-1.30.01-AM.png" class="w-2 h-2" alt="">
+                            <p class="text-[12px]">4.8</p>
+                            <div class="h-3 w-[2px] bg-black opacity-40"></div>
+                            <p class="text-[12px]">598 reviews</p>
+                        </div>
+                        <div class="mb-2 text-xs font-semibold">
+                            ₹15 Extra Discount on UPI
+                        </div>
+                         <button class="bg-[#FF0000] w-full text-white rounded-md py-1  font-bold ">ADD TO CART</button>
+                    </div>
+
+                </div>
+
+                <!-- card5 -->
+                <div class="bg-[#E3E3E3] min-h-[50vh] min-w-[280px] rounded-lg relative  hemlo p-2 ">
+                    <div class="text-white bg-black text-xs font-bold py-[3px] px-[5px] absolute left-0 top-3 rounded-r-lg "> BT CALLING</div>
+                  
+                    <div class="group relative">
+                        <img src="./images_all/best seller page/img1.png" class="w-[220px] pt-8  px-4 opacity-100 group-hover:opacity-0 relative transition-all duration-500 group " alt="">
+                        <img src="./images_all/best seller page/img1_hover.png" class="w-[220px] pt-8  px-4  opacity-0 absolute group-hover:opacity-100 transition-all duration-500 top-0" alt="">
+    
+                    </div>
+                   
+
+                    <div class="bg-white rounded-md p-2 px-3 flex-col w-full ">
+                        <h3 class="font-bold">Airdopes 141</h3>
+                        <div class="flex gap-x-2 items-center border-b-2 border-gray-200 py-1">
+                            <p class="font-bold">₹1,499 </p> 
+                            <p class="text-[#28a745] ">67% off</p>
+                            <del class="text-xs">₹4,490</del>
+                        </div>
+                        <div class="flex items-center gap-x-1 my-1">
+                            <img src="./images_all/small icons/WhatsApp-Image-2023-02-16-at-1.30.01-AM.png" class="w-2 h-2" alt="">
+                            <p class="text-[12px]">4.8</p>
+                            <div class="h-3 w-[2px] bg-black opacity-40"></div>
+                            <p class="text-[12px]">598 reviews</p>
+                        </div>
+                        <div class="mb-2 text-xs font-semibold">
+                            ₹15 Extra Discount on UPI
+                        </div>
+                         <button class="bg-[#FF0000] w-full text-white rounded-md py-1  font-bold ">ADD TO CART</button>
+                    </div>
+
+                </div>
+                
+
+            </div>
+
+            
+
+           
+        </div>
+
+         <!-- videos feature -->
+         <div class="relative max-w-[1450px] mt-2 mx-auto mb-[100px] ">
+            <div class="w-full flex gap-x-6 overflow-x-hidden py-1">
+                <!-- video card 1 -->
+                <div class="overflow-hidden rounded-md shadow-[0px_2px_3px_0px_rgba(0,0,0,0.4)] relative cursor-pointer min-w-[240px]">
+                    <div class="text-white bg-[#8109fa] text-xs font-bold py-[3px] px-[5px] absolute left-0 top-3 rounded-r-lg "> 🎉 NEW LAUNCH</div>
+                   <video autoplay loop src="./images_all/videos/quinn_E5O_Qsp0eX18ZzXlX_qxR_card_thumbnail_21.mp4" class=""></video>
+                   <div class="colvideo  pt-7 px-1 pb-5  relative">
+                      <img src="./images_all/videos/img1.png" class="w-[55px] absolute -top-7 border-gray-300 rounded-md border-2 bg-white" alt="">
+                      <h2  class="font-bold ">Wave Style Call</h2>
+                      <div class="w-full bg-gray-200 h-[1.2px] my-2"> </div>
+                      <div  class="flex gap-x-1 text-[12px] justify-center items-center">
+                        <img src="./images_all/small icons/green_star.png" class="w-[18px]" alt="">
+                        <div >Be the first to review</div>
+                      </div>
+                      
+                      <div class="flex gap-x-2 items-center text-[16px] mt-1 border-gray-200 ">
+                        
+                        <p class="text-[#05A143] ">76% off</p>
+                        <p class="font-bold">₹1,899</p> 
+                        <p  class="line-through opacity-60">₹ 7,990</p>
+                     </div>
+
+                   </div>
+                </div>
+
+                <!-- videocard 2 -->
+                <div class="overflow-hidden rounded-md shadow-[0px_2px_3px_0px_rgba(0,0,0,0.4)] cursor-pointer relative min-w-[240px]">
+                    <div class="text-white bg-[#8109fa] text-xs font-bold py-[3px] px-[5px] absolute left-0 top-3 rounded-r-lg "> 🎉 NEW LAUNCH</div>
+
+                    <video autoplay loop src="./images_all/videos/quinn_yF_-HMwDwKyGNkK2fatFX_card_thumbnail_25.mp4" ></video>
+                    <div class="colvideo  pt-7 px-1 pb-5  relative">
+                       <img src="./images_all/videos/img2.png" class="w-[55px] absolute -top-7 border-gray-300 rounded-md border-2 bg-white" alt="">
+                       <h2  class="font-bold ">Airdopes Atom 83</h2>
+                       <div class="w-full bg-gray-200 h-[1.2px] my-2"> </div>
+                       <div  class="flex gap-x-1 text-[12px] justify-center items-center">
+                         <img src="./images_all/small icons/green_star.png" class="w-[18px]" alt="">
+                         <div >Be the first to review</div>
+                       </div>
+                       
+                       <div class="flex gap-x-2 items-center text-[16px] mt-1 border-gray-200 ">
+                         
+                         <p class="text-[#05A143] ">62% off</p>
+                         <p class="font-bold">₹1,299</p> 
+                         <p  class="line-through opacity-60">₹ 3,490</p>
+                      </div>
+ 
+                    </div>
+                 </div>
+
+                 <!-- videocard3 -->
+                 <div class="overflow-hidden rounded-md shadow-[0px_2px_3px_0px_rgba(0,0,0,0.4)] cursor-pointer relative min-w-[240px]">
+                    <div class="text-white bg-[#8109fa] text-xs font-bold py-[3px] px-[5px] absolute left-0 top-3 rounded-r-lg "> 🎉 NEW LAUNCH</div>
+                    <video autoplay loop src="./images_all/videos/quinn_kAt-G6XxtDoUuG4in7uEa_card_thumbnail.mp4" ></video>
+                    <div class="colvideo  pt-7 px-1 pb-5  relative">
+                       <img src="./images_all/videos/img3.png" class="w-[55px] absolute -top-7 border-gray-300 rounded-md border-2 bg-white" alt="">
+                       <h2  class="font-bold ">Airdopes Atom 81</h2>
+                       <div class="w-full bg-gray-200 h-[1.2px] my-2"> </div>
+                       <div  class="flex gap-x-1 text-[12px] justify-center items-center">
+                         <img src="./images_all/small icons/green_star.png" class="w-[18px]" alt="">
+                         <div >Be the first to review</div>
+                       </div>
+                       
+                       <div class="flex gap-x-2 items-center text-[16px] mt-1 border-gray-200 ">
+                         
+                         <p class="text-[#05A143] ">57% off</p>
+                         <p class="font-bold">₹1,499</p> 
+                         <p  class="line-through opacity-60">₹ 3,490</p>
+                      </div>
+ 
+                    </div>
+                 </div>
+
+                 <!-- videocard4 -->
+                 <div class="overflow-hidden rounded-md shadow-[0px_2px_3px_0px_rgba(0,0,0,0.4)] cursor-pointer relative min-w-[240px]">
+                    <video autoplay loop src="./images_all/videos/quinn_J5jruxliHDOaP6CargKes_card_thumbnail.mp4" ></video>
+                    <div class="colvideo  pt-7 px-1 pb-5  relative">
+                       <img src="./images_all/videos/img4.png" class="w-[55px] absolute -top-7 border-gray-300 rounded-md border-2 bg-white" alt="">
+                       <h2  class="font-bold ">Airdopes 141</h2>
+                       <div class="w-full bg-gray-200 h-[1.2px] my-2"> </div>
+                       <div  class="flex gap-x-1 text-[12px] justify-center items-center">
+                         <img src="./images_all/small icons/green_star.png" class="w-[18px]" alt="">
+                         <div class="flex items-center gap-x-1 my-1">
+                            <p class="text-[12px]">4.8</p>
+                            <div class="h-3 w-[2px] bg-black opacity-40"></div>
+                            <p class="text-[12px]">500+ reviews</p>
+                        </div>
+                       </div>
+                       
+                       <div class="flex gap-x-2 items-center text-[16px] mt-1 border-gray-200 ">
+                         
+                         <p class="text-[#05A143] ">66% off</p>
+                         <p class="font-bold">₹1,499</p> 
+                         <p  class="line-through opacity-60">₹ 4,490</p>
+                      </div>
+ 
+                    </div>
+                 </div>
+
+                 <!-- video card5 -->
+                 <div class="overflow-hidden rounded-md shadow-[0px_2px_3px_0px_rgba(0,0,0,0.4)] cursor-pointer relative min-w-[240px]">
+                    <video autoplay loop src="./images_all/videos/quinn_rq_O5tqSZIIgR13t0gUaN_card_thumbnail.mp4" ></video>
+                    <div class="colvideo  pt-7 px-1 pb-5  relative">
+                       <img src="./images_all/videos/img5.png" class="w-[55px] absolute -top-7 border-gray-300 rounded-md border-2 bg-white" alt="">
+                       <h2  class="font-bold ">Airdopes 141 Pro</h2>
+                       <div class="w-full bg-gray-200 h-[1.2px] my-2"> </div>
+                       <div  class="flex gap-x-1 text-[12px] justify-center items-center">
+                         <img src="./images_all/small icons/green_star.png" class="w-[18px]" alt="">
+                         <div class="flex items-center gap-x-1 my-1">
+                            <p class="text-[12px]">4.9</p>
+                            <div class="h-3 w-[2px] bg-black opacity-40"></div>
+                            <p class="text-[12px]">37 reviews</p>
+                        </div>
+                       </div>
+                       
+                       <div class="flex gap-x-2 items-center text-[16px] mt-1 border-gray-200 ">
+                         
+                         <p class="text-[#05A143] ">43% off</p>
+                         <p class="font-bold">₹1,699</p> 
+                         <p  class="line-through opacity-60">₹ 2,990</p>
+                      </div>
+ 
+                    </div>
+                 </div>
+
+                 <!-- videocard6 -->
+                 <div class="overflow-hidden rounded-md shadow-[0px_2px_3px_0px_rgba(0,0,0,0.4)] cursor-pointer relative min-w-[240px]">
+                    <div class="text-white bg-[#8109fa] text-xs font-bold py-[3px] px-[5px] absolute left-0 top-3 rounded-r-lg "> 🎉 NEW LAUNCH</div>
+
+                    <video autoplay loop src="./images_all/videos/videolast.mp4" ></video>
+                    <div class="colvideo  pt-7 px-1 pb-5  relative">
+                       <img src="./images_all/videos/img5.png" class="w-[55px] absolute -top-7 border-gray-300 rounded-md border-2 bg-white" alt="">
+                       <h2  class="font-bold ">Airdopes 172 </h2>
+                       <div class="w-full bg-gray-200 h-[1.2px] my-2"> </div>
+                       <div  class="flex gap-x-1 text-[12px] justify-center items-center">
+                         <img src="./images_all/small icons/green_star.png" class="w-[18px]" alt="">
+                         <div >Be the first to review</div>
+                       </div>
+                       
+                       <div class="flex gap-x-2 items-center text-[16px] mt-1 border-gray-200 ">
+                         
+                         <p class="text-[#05A143] ">54% off</p>
+                         <p class="font-bold">₹1,599</p> 
+                         <p  class="line-through opacity-60">₹ 3,490</p>
+                      </div>
+ 
+                    </div>
+                 </div>
+            </div>
+
+         </div>
+         
+        
+            
+
     </div>
+    
 </body>
 </html>
